@@ -1,11 +1,11 @@
 import React from 'react';
 import Counter from './components/counter';
+import Power from './components/power';
 
 const App = () => (
   <div>
     <Counter/>
-    <Counter/>
-    <Counter/>
+    <Power/>
   </div>
 
 );
