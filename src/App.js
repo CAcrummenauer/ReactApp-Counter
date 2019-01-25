@@ -2,7 +2,12 @@ import React from 'react';
 import Counter from './counter';
 
 const App = () => (
-  <Counter/>
+  <div>
+    <Counter/>
+    <Counter/>
+    <Counter/>
+  </div>
+
 );
 
 export default App;
