@@ -8,14 +8,28 @@ class TodoList extends React.Component {
 
     handlerInputText(e) {
         //preventDefault(e);
-        console.log(e.target.value);
+        this.setState({
+            text: e.target.value
+        });
+    }
+
+    handlerButton() {
+        console.log('Entrou no button');
+        var list = this.state.list;
+        list.push(this.state.text);
+        this.setState({
+            list
+        });
     }
 
     render() {
         return (
             <div>
                 <input type='text' onChange = {(e) => this.handlerInputText(e)} />
-                <button type='button'>Adicionar</button>
+                <button type='button' onClick = {() => this.handlerButton()}>Adicionar</button>
+                {
+                    this.state.list.map((valor, index) => (<li key={index}>{valor}</li>))
+                }
             </div>
         );
     }
